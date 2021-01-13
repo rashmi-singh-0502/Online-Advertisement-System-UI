@@ -1,5 +1,5 @@
 import './App.css';
-import {EditAdvertiseComponent} from './components/edit_advertise_by_name';
+/* import {EditAdvertiseComponent} from './components/edit_advertise_by_name'; */
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import {HomePageComponent} from './components/home_page';
 import {GetAdvertiseListComponent} from './components/read_advertise_list.js';
@@ -16,9 +16,9 @@ function App() {
         <Route exact path="/">
           <HomePageComponent></HomePageComponent>
         </Route>
-        <Route path="/editadvertise">
+        {/* <Route path="/editadvertise">
           <EditAdvertiseComponent></EditAdvertiseComponent>
-        </Route>
+        </Route> */}
         <Route path="/showlist">
           <GetAdvertiseListComponent></GetAdvertiseListComponent>
         </Route>

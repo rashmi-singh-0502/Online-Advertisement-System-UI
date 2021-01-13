@@ -60,7 +60,7 @@ function renderTableData(advertiseList){
                 <td>{price}</td>
                 <td>
                     <button className="btn btn-info shadow-none"><span className="glyphicon glyphicon-edit" aria-hidden="true" title="Edit advertise"></span></button>
-                    <button className="btn btn-danger shadow-none"><span className="glyphicon glyphicon-trash" aria-hidden="true" title="Delete advertise"></span></button>
+                    <button className="btn btn-danger shadow-none"><span className="glyphicon glyphicon-remove" aria-hidden="true" title="Delete advertise"></span></button>
                     <button className="btn btn-info shadow-none"><span className="glyphicon glyphicon-info-sign" aria-hidden="true" title="View advertise details"></span></button>
                 </td>
             </tr>

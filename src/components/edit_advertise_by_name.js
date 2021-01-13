@@ -1,43 +1,45 @@
-import React from 'react';
-import '../css/edit_advertise_by_name.css';
+/* import {useRef} from 'react';
+import {useDispatch} from 'react-redux';
+import EditAdvertiseAction from '../actions/edit_advertise_by_name_action';
+import {Button} from 'react-bootstrap';
 
-export const EditAdvertiseComponent = (props) => {
+let advertiseIdRef;
+let advertiseTitleRef;
+let advertiseDescriptionRef;
+let advertisePriceRef;
+let dispatch;
+
+const EditAdvertiseComponent = (props) => {
+    advertiseIdRef = useRef(null);
+    advertiseTitleRef = useRef(null);
+    advertiseDescriptionRef = useRef(null);
+    advertisePriceRef = useRef(null);
+    dispatch = useDispatch();
+
     return(
-        <body>
-            <div class="testbox">
-                <form action = "/">
-                    <div class="banner">
-                        <h1>Edit Advertise</h1>
-                    </div>
-                    <div class="item">
-                        <p>Advertise Title</p>
-                        <input type="text" name="title" placeholder="Enter Advertise Title"></input>
-                    </div>
-                    <div class="item">
-                        <p>Advertise Category</p>
-                        <select required>
-                            <option value="1">Select Category</option>
-                            <option value="2">Electronics</option>
-                            <option value="3">Hardware</option>
-                            <option value="4">Vehicles</option>
-                        </select>
-                    </div>
-                    <div class="item">
-                        <p>Advertise Description</p>
-                        <textarea name="description" placeholder="Enter Advertise Description"></textarea>
-                    </div>
-                    <div class="item">
-                        <p>Price</p>
-                        <input type="text" name="price" placeholder="Enter price"></input>
-                    </div>
-                    <div class="btn-block">
-                          <button type="submit" href="/">UPDATE</button>
-                      </div>
-                </form>
-            </div>
-            {/* <footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer> */}
-        </body>
-    )
+        <div>
+            <h1><center>Edit Advertise</center></h1>
+            <h3>
+                Advertise id:<input type="text" readOnly={true} ref={advertiseIdRef} value={props.advertise.id}></input><br></br><br></br>
+                Advertise title:<input type="text" ref={advertiseTitleRef} value={props.advertise.title}></input><br></br><br></br>
+                Advertise description:<textarea ref={advertiseDescriptionRef} value={props.advertise.description}></textarea><br></br><br></br>
+                Price:<input type="text" ref={advertisePriceRef} value={props.advertise.price}></input><br></br><br></br>
+                <button className="btn btn-info shadow-none" value="UPDATE" onClick={editAdvertise.bind(this,props)}><span className="glyphicon glyphicon-edit" aria-hidden="true" title="Update advertise"></span>Update</button>
+                <button className="btn btn-danger shadow-none" value="CANCEL" onClick={props.renderAddProductForm.bind(this)}><span className="glyphicon glyphicon-remove" aria-hidden="true" title="Cancel"></span>Cancel</button>
+            </h3>
+        </div>
+    );
 }
+
+function editAdvertise(props){
+    console.log('Update Advertise: ',props.advertise);
+    props.advertise.id = advertiseIdRef.current.value;
+    props.advertise.title = advertiseTitleRef.current.value;
+    props.advertise.description = advertiseDescriptionRef.current.value;
+    props.advertise.price = advertisePriceRef.current.value;
+    dispatch(EditAdvertiseAction(props.advertise)).then((response) => {
+        props.renderAddProductForm();
+    })
+}
+
+export default EditAdvertiseComponent; */
